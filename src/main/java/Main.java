@@ -1,21 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+import teepo.Factorial;
+import teepo.Util;
+
 
 /**
  *
- * @author usuario
+ * @author Juan Pablo Calle
  */
 public class Main {
 
+		
+	
 	/**
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) 
 	{
-		System.out.println("Hola Mundo");
+		try 
+		{
+			short numero;
+			
+			//Prueba de sacar un factorial
+			numero = 7;
+			Util.say(numero + "! = " + Factorial.calcular(numero));
+		}
+		catch (NullPointerException nullE)
+		{
+			//este error ocurre cuando se le da a la X en una ventana de tipo Input ya que devuelve un puntero a null
+			Util.trace("La operación ha sido cancelada");
+		}
+		catch (Exception e) 
+		{
+			Util.trace("Ha ocurrido un error desconocido al ejecutar el programa, mirar la consola para mas detalles");
+			System.out.println("Mensaje del error: " + e);
+		}
 	}
 	
 }
