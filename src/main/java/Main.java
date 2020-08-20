@@ -4,7 +4,7 @@ import teepo.Fibonacci;
 import teepo.Primos;
 import teepo.Util;
 import teepo.Figuras;
-
+import teepo.Mate;
 
 /**
  *
@@ -22,27 +22,29 @@ public class Main {
 		try 
 		{
 			
-			/*short numero;
+			short n;
 			
 			//Prueba de sacar un factorial
-			numero = 7;
-			Util.say(numero + "! = " + Factorial.calcular(numero));*/
+			n = 7;
+			Util.say(n + "! = " + Factorial.calcular(n));
 						
 						
-			// Prueba de hallar numeros primos
-			/*Primos.primosEntre(453, 3500);*/
+			//Prueba de hallar numeros primos
+			Util.say("Hay "+Primos.primosEntre(453, 3500)+" entre 453 y 3500");
 
 
 			//Prueba numero de fibonacci
-			//Fibonacci.calcular(200);
+			Util.say("Numero 200 de fibonacci: " + Fibonacci.calcular(200));
 
 			// Prueba dibujar figuras
-			/*Figuras.figuraUno();
+			Figuras.figuraUno();
 			Figuras.figuraDos();
 			Figuras.figuraTres();
-			Figuras.figuraCuatro();*/
+			Figuras.figuraCuatro();
 
-			
+			//Prueba promedio numeros
+			int[] arr = Primos.buscarPrimos(100);
+                        Util.say("Promedio 100 primeros primos: " + Mate.promedio(arr));
 		}
 		catch (NullPointerException nullE)
 		{

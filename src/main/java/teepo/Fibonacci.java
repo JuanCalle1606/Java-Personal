@@ -29,7 +29,7 @@ public class Fibonacci
 			fibBase = fibInc - fibBase;
 		}
 
-		System.out.println("El promedio hasta este numero es: " + (sum/con));
+		System.out.println("El promedio hasta el numero"+n+" de fibonacci es: " + (sum/con));
 
 		return fibInc;
 	}

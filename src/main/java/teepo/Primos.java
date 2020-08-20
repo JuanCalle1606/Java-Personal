@@ -6,24 +6,24 @@ package teepo;
  */
  public class Primos 
  {
- 	
-    private static int[] primosBase = new int[1];
-    
-    public static int[] buscarPrimosPriv(int min,int limite)
+
+	private static int[] primosBase = new int[1];
+	
+	public static int[] buscarPrimosPriv(int min,int limite)
 	{
-	    init((limite*2)*(limite*2));
+		init((limite*2)*(limite*2));
 		int[] dev = new int[limite];
 		int con = min, primos = 0;
 		
 		while(dev[limite-1] == 0)
 		{
-		    if (esPrimoPriv(con))
-		    {
-		        dev[primos] = con;
-		        primos++;
-		        System.out.println(con);
-		    }
-		    con++;
+			if (esPrimoPriv(con))
+			{
+				dev[primos] = con;
+				primos++;
+				//System.out.println(con);
+			}
+			con++;
 		}
 		return dev;
 	}
@@ -39,7 +39,7 @@ package teepo;
 				primos++;
 				if (trace)
 				{
-				    System.out.println(i);
+					System.out.println(i);
 				}
 			}
 		}
@@ -105,21 +105,21 @@ package teepo;
 	}
 	
 	public static int primosEntre(int min,int max)
-    {
-        return primosEntrePriv(min,max,false);
-    }
-    
-    public static int primosEntre(int min,int max,boolean trace)
-    {
-        return primosEntrePriv(min,max,trace);
-    }
-    
-    public static int[] buscarPrimos(int min,int limite)
+	{
+		return primosEntrePriv(min,max,false);
+	}
+	
+	public static int primosEntre(int min,int max,boolean trace)
+	{
+		return primosEntrePriv(min,max,trace);
+	}
+	
+	public static int[] buscarPrimos(int min,int limite)
 	{
 		return buscarPrimosPriv(min,limite);
 	}
-    
-    public static int[] buscarPrimos(int limite)
+	
+	public static int[] buscarPrimos(int limite)
 	{
 		return buscarPrimosPriv(0,limite);
 	}
