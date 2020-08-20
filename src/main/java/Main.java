@@ -1,5 +1,6 @@
 
 import teepo.Factorial;
+import teepo.Primos;
 import teepo.Util;
 
 
@@ -18,11 +19,16 @@ public class Main {
 	{
 		try 
 		{
-			short numero;
+			
+			/*short numero;
 			
 			//Prueba de sacar un factorial
 			numero = 7;
-			Util.say(numero + "! = " + Factorial.calcular(numero));
+			Util.say(numero + "! = " + Factorial.calcular(numero));*/
+						
+						
+			// Prueba de hallar numeros primos
+			Primos.primosEntre(453, 3500);
 		}
 		catch (NullPointerException nullE)
 		{
