@@ -1,5 +1,6 @@
 
 import teepo.Factorial;
+import teepo.Fibonacci;
 import teepo.Primos;
 import teepo.Util;
 
@@ -28,7 +29,11 @@ public class Main {
 						
 						
 			// Prueba de hallar numeros primos
-			Primos.primosEntre(453, 3500);
+			/*Primos.primosEntre(453, 3500);*/
+
+
+			//Prueba numero de fibonacci
+			Fibonacci.calcular(200);
 		}
 		catch (NullPointerException nullE)
 		{
