@@ -3,6 +3,7 @@ import teepo.Factorial;
 import teepo.Fibonacci;
 import teepo.Primos;
 import teepo.Util;
+import teepo.Figuras;
 
 
 /**
@@ -33,7 +34,13 @@ public class Main {
 
 
 			//Prueba numero de fibonacci
-			Fibonacci.calcular(200);
+			//Fibonacci.calcular(200);
+
+			// Prueba dibujar figuras
+			Figuras.figuraUno();
+			Figuras.figuraDos();
+			Figuras.figuraTres();
+			Figuras.figuraCuatro();
 		}
 		catch (NullPointerException nullE)
 		{
