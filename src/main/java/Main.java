@@ -37,10 +37,12 @@ public class Main {
 			//Fibonacci.calcular(200);
 
 			// Prueba dibujar figuras
-			Figuras.figuraUno();
+			/*Figuras.figuraUno();
 			Figuras.figuraDos();
 			Figuras.figuraTres();
-			Figuras.figuraCuatro();
+			Figuras.figuraCuatro();*/
+
+			
 		}
 		catch (NullPointerException nullE)
 		{

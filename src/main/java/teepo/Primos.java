@@ -4,26 +4,50 @@ package teepo;
  *
  * @author Juan Pablo Calle
  */
-public class Primos 
-{
-	private static int[] primosBase;
-	
-   public static void primosEntre(int min,int max)
+ public class Primos 
+ {
+ 	
+    private static int[] primosBase = new int[1];
+    
+    public static int[] buscarPrimosPriv(int min,int limite)
 	{
-		init(max);
-		short primos = 0;
-		for (int i = min; i <= max; i++) 
+	    init((limite*2)*(limite*2));
+		int[] dev = new int[limite];
+		int con = min, primos = 0;
+		
+		while(dev[limite-1] == 0)
 		{
-			if (esPrimo(i)) 
-			{
-				primos++;
-				//System.out.println(i);
-			}
+		    if (esPrimoPriv(con))
+		    {
+		        dev[primos] = con;
+		        primos++;
+		        System.out.println(con);
+		    }
+		    con++;
 		}
-		System.out.println("Se hallaron "+primos + " numeros primos");
+		return dev;
 	}
 	
-	public static boolean esPrimo(int numero)
+	private static int primosEntrePriv(int min,int max,boolean trace)
+	{
+		init(max);
+		int primos = 0;
+		for (int i = min; i <= max; i++) 
+		{
+			if (esPrimoPriv(i)) 
+			{
+				primos++;
+				if (trace)
+				{
+				    System.out.println(i);
+				}
+			}
+		}
+		//System.out.println("Se hallaron "+primos + " numeros primos");
+		return primos;
+	}
+	
+	private static boolean esPrimoPriv(int numero)
 	{
 		for(int i = 0; i<primosBase.length;i++)
 		{
@@ -72,6 +96,32 @@ public class Primos
 				}
 			}
 		}
+	}
+	
+	public static boolean esPrimo(int numero)
+	{
+		init(numero);
+		return esPrimoPriv(numero);
+	}
+	
+	public static int primosEntre(int min,int max)
+    {
+        return primosEntrePriv(min,max,false);
+    }
+    
+    public static int primosEntre(int min,int max,boolean trace)
+    {
+        return primosEntrePriv(min,max,trace);
+    }
+    
+    public static int[] buscarPrimos(int min,int limite)
+	{
+		return buscarPrimosPriv(min,limite);
+	}
+    
+    public static int[] buscarPrimos(int limite)
+	{
+		return buscarPrimosPriv(0,limite);
 	}
 	/*
 	public static boolean esPrimo(int numero)
