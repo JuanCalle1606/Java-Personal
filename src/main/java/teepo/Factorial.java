@@ -9,7 +9,7 @@ public class Factorial {
 	 * Calcula el factorial de un numero
 	 *
 	 * @param numero Un numero short al que se le quiere hallar el factorial. Este numero es short debido a que numeros muy grandes no se les haya el factorial debido a si inmensidad, el numero maximo calculable es el factorial de 170
-	 *
+	 * @return El factorial del numero dado.
 	 */	
 	public static double calcular(short numero)
 	{

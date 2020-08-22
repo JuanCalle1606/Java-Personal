@@ -4,8 +4,8 @@ package teepo;
  *
  * @author Juan Pablo Calle
  */
- public class Primos 
- {
+public class Primos 
+{
 
 	private static int[] primosBase = new int[1];
 	
@@ -61,7 +61,7 @@ package teepo;
 		return true;
 	}
 
-	public static void init(int max) 
+	private static void init(int max) 
 	{
 		int x,k;
 		boolean primo = true;
@@ -92,50 +92,69 @@ package teepo;
 				k++;
 				if(k == primosBase.length)
 				{
-				   return; 
+				   return;
 				}
 			}
 		}
 	}
 	
+	/**
+	 * Indica si un numero es primo o no es primo.
+	 * 
+	 * @param numero El numero que se quiere saber si es primo o no.
+	 * @return <code>true</code> en caso de que el numero sea primo, <code>false</code> en caso contrario.
+	 */
 	public static boolean esPrimo(int numero)
 	{
 		init(numero);
 		return esPrimoPriv(numero);
 	}
 	
+	/**
+	 * Cuenta la cantidad de numeros primos que hay en un rango determinado de numeros.
+	 * 
+	 * @param min El numero menor a verificar.
+	 * @param max El numero mayor a verificar.
+	 * @return Devuelve la cantidad de numeros primos encontrados
+	 */
 	public static int primosEntre(int min,int max)
 	{
 		return primosEntrePriv(min,max,false);
 	}
 	
+	/**
+	 * Cuenta la cantidad de numeros primos que hay en un rango determinado de numeros.
+	 * 
+	 * @param min El numero menor a verificar.
+	 * @param max El numero mayor a verificar.
+	 * @param trace Indica si se quiere que los numeros primos encontrados se digan en la consola.
+	 * @return Devuelve la cantidad de numeros primos encontrados
+	 */
 	public static int primosEntre(int min,int max,boolean trace)
 	{
 		return primosEntrePriv(min,max,trace);
 	}
 	
+	/**
+	 * Busca un numero dados de numeros primos apartir de otro numero.
+	 * 
+	 * @param min El numero apartir del cual se quiere empezar a buscar.
+	 * @param limite La cantidad de numeros primos que se quieren hallar.
+	 * @return Devuelve un arreglo en el que se contienen todos los numeros primos encontrados.
+	 */
 	public static int[] buscarPrimos(int min,int limite)
 	{
 		return buscarPrimosPriv(min,limite);
 	}
 	
+	/**
+	 * Busca un numero dados de numeros primos apartir del 0.
+	 * 
+	 * @param limite La cantidad de numeros primos que se quieren hallar.
+	 * @return Devuelve un arreglo en el que se contienen todos los numeros primos encontrados.
+	 */
 	public static int[] buscarPrimos(int limite)
 	{
 		return buscarPrimosPriv(0,limite);
 	}
-	/*
-	public static boolean esPrimo(int numero)
-	{
-		int contador = 2;
-		boolean primo=true;
-		while ((primo) && (contador!=numero))
-		{
-			if (numero % contador == 0)
-			 {
-				primo = false;
-			 }
-			contador++;
-		}
-		return primo;
-	}*/
 }

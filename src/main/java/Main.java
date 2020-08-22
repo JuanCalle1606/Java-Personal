@@ -44,7 +44,7 @@ public class Main {
 
 			//Prueba promedio numeros
 			int[] arr = Primos.buscarPrimos(100);
-                        Util.say("Promedio 100 primeros primos: " + Mate.promedio(arr));
+			Util.say("Promedio 100 primeros primos: " + Mate.promedio(arr));
 		}
 		catch (NullPointerException nullE)
 		{

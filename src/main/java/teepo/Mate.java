@@ -6,7 +6,13 @@ package teepo;
  */
 public class Mate 
 {    
-    public static double promedio(int... numeros)
+	/**
+	 * Encuentra el promedio d euna lista de numeros.
+	 *
+	 * @param numeros La lista de numeros a la que se le quiere sacar el promedio.
+	 * @return El promedio de todos los numeros dados.
+	 */
+	public static double promedio(int... numeros)
     {
         double dev=0;
     	int cont=0;
@@ -17,7 +23,12 @@ public class Mate
         }
     	return (dev/cont);
     }
-
+    /**
+	 * Encuentra el promedio d euna lista de numeros.
+	 *
+	 * @param numeros La lista de numeros a la que se le quiere sacar el promedio.
+	 * @return El promedio de todos los numeros dados.
+	 */
     public static double promedio(double... numeros)
     {
         double dev=0;

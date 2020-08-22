@@ -12,6 +12,9 @@ public class Figuras
     private static String pat3 = "_|";
     private static String pat4 = "|_";
     
+    /**
+     * Dibuja una figura en la consola usando patrones y condicionales.
+     */
     public static void figuraUno()
     {
         for (int i = 1; i <= 5 ;i++ )
@@ -20,7 +23,9 @@ public class Figuras
         }
         System.out.println("");
     }
-    
+    /**
+     * Dibuja una figura en la consola usando patrones y condicionales.
+     */
     public static void figuraDos()
     {
         System.out.println("");
@@ -29,7 +34,9 @@ public class Figuras
         System.out.println(repetirln(2,repetir(8,pat)));
         System.out.println("");
     }
-    
+    /**
+     * Dibuja una figura en la consola usando patrones y condicionales.
+     */
     public static void figuraTres()
     {
         System.out.println("");
@@ -41,7 +48,9 @@ public class Figuras
         System.out.println(repetir(3,pat2)+repetir(5,pat)+repetir(3,pat2));
         System.out.println("");
     }
-    
+    /**
+     * Dibuja una figura en la consola usando patrones y condicionales.
+     */
     public static void figuraCuatro()
     {
         System.out.println("");
@@ -52,21 +61,20 @@ public class Figuras
         }
     }
     
-     private static String repetir(int can, String con) 
-     { 
-         return new String(new char[can]).replace("\0", con); 
-     }
+    private static String repetir(int can, String con) 
+    { 
+        return new String(new char[can]).replace("\0", con); 
+    }
      
-     private static String repetirln(int can, String con) 
-     { 
-         String dev = con;
-         for (int i = 0; i < can-1;i++ ) 
-         {
+    private static String repetirln(int can, String con) 
+    { 
+        String dev = con;
+        for (int i = 0; i < can-1;i++ ) 
+        {
             dev += "\n" + con;
-         }
+        }
          
-         return dev;
-     }
-     
-
+        return dev;
+    }
+    
 }
