@@ -34,7 +34,7 @@ public class Main {
 
 
 			//Prueba numero de fibonacci
-			Util.say("Numero 200 de fibonacci: " + Fibonacci.calcular(200));
+			Util.say("Numero 200 de fibonacci: " + Fibonacci.calcular((short)200));
 
 			// Prueba dibujar figuras
 			Figuras.figuraUno();

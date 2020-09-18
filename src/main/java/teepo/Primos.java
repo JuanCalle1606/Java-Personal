@@ -9,7 +9,7 @@ public class Primos
 
 	private static int[] primosBase = new int[1];
 	
-	public static int[] buscarPrimosPriv(int min,int limite)
+	private static int[] buscarPrimosPriv(int min,int limite)
 	{
 		init((limite*2)*(limite*2));
 		int[] dev = new int[limite];
