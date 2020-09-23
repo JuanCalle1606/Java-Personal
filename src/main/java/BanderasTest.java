@@ -11,5 +11,7 @@ public class BanderasTest{
 		Bandera.Colombia();
 		System.out.println("\nBandera de Formula 1:\n");
 		Bandera.Formula1();
+		System.out.println("\nBandera de Pirata:");
+		Bandera.Pirata();
 	}
 }
