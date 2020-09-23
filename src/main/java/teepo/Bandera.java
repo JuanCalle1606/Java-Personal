@@ -23,4 +23,13 @@ public class Bandera{
 				ConsoleColors.BLUE_BACKGROUND:ConsoleColors.RED_BACKGROUND)+" "
 				:j<clen-1?" ":ConsoleColors.RESET+"\n");
 	}
+	public static void Formula1(){
+		int flen=6,clen=20;
+		initF:for(int i=0;i<flen;i++)
+			initC:for(int j=0;j<clen;j+=2)
+				System.out.print(j!=clen-2?i%2==0?
+				(j/2)%2==0?ConsoleColors.WHITE_BACKGROUND+"  ":ConsoleColors.RESET+"  ":
+				(j/2)%2==0?ConsoleColors.RESET+"  ":ConsoleColors.WHITE_BACKGROUND+"  "
+				:ConsoleColors.RESET+"\n");
+	}
 }

@@ -9,5 +9,7 @@ public class BanderasTest{
 		Bandera.USA();
 		System.out.println("\nBandera de Colombia:\n");
 		Bandera.Colombia();
+		System.out.println("\nBandera de Formula 1:\n");
+		Bandera.Formula1();
 	}
 }
