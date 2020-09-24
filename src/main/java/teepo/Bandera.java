@@ -33,12 +33,14 @@ public class Bandera{
 				:ConsoleColors.RESET+"\n");
 	}
 	public static void Pirata(){
+
 		//esta bandera aun no esta terminada porque falta que se dibujen las espadas
 		String M=ConsoleColors.WHITE_BACKGROUND+" "+ConsoleColors.RESET;
 		System.out.print(ConsoleColors.WHITE_BACKGROUND+"\n \n"+ConsoleColors.RESET);
 		int flen=30,clen=66;
 		String[][] dev = new String[flen][clen];
 		drawPirataHead(M,flen,clen,dev,20);
+		drawPirataSword(M,flen,clen,dev,20);
 		initF:for(int i=0;i<flen;i++)
 			initC:for(int j=0;j<clen;j++)
 				System.out.print(j<clen-1?dev[i][j]:
@@ -54,5 +56,15 @@ public class Bandera{
 				:i==10&&(j==c+12||j==c+13)?M:" ":" ":i==12?j>c+6&&j<c+19?
 				M:" ":(j-c>i-10-(i>13&&i<17?i-14:i==13?0:2))&&
 				(j<55-i+(i>13&&i<17?i-14:i==13?0:2))?M:" ":" ";
+	}
+	private static void drawPirataSword(String M,int flen,int clen,String[][] dev,int c){
+		initF:for(int i=0;i<flen;i++)
+			initC:for(int j=0;j<clen;j++)
+				dev[i][j]=
+				i>3&&(i>18||j>44||j<21||(i==18&&(j<24||j>41)))?
+					j<i-3||j>67-i?
+						M
+					:" "
+				:dev[i][j];
 	}
 }
